@@ -1,0 +1,21 @@
+<div class="col-md-4 mb-4 wow fadeInRight">
+  <div class="card mb-4 wow fadeInRight">
+    <div class="card-header">Читайте также</div>
+    <div class="card-body">
+      {% for post in site.related_posts limit:3 %}
+      <ul class="list-unstyled related-posts">
+        <li class="media">
+          <img
+            src="{{post.pic}}"
+            style="width:100px;" alt="" class="d-flex mr-3">
+          <div class="media-body">
+            <a class="related" href="{{ site.baseurl }}{{ post.url }}">
+              <h5 class="mt-0 mb-1 font-weight-bold">{{ post.title }}</h5>
+            </a>
+            </div>
+          </li>
+        </ul>
+        {% endfor %}   
+    </div>
+  </div>
+</div>

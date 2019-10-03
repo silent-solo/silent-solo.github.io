@@ -1,0 +1,291 @@
+/* code-highlight theme  */
+@import url(zenburn.css);
+
+/* Main */
+
+html,
+body {
+  height: 100%;
+}
+
+#page-content {
+  flex: 1 0 auto;
+}
+
+body {
+  font-family: "Roboto", Arial, sans-serif;
+  background-color: #262626;
+}
+
+main {
+  padding-top: 120px;
+  padding-bottom: 20px;
+  background-color: #221d1a;
+  background-image: url("../img/shattered-dark.png");
+}
+
+/* Cards */
+
+.card-header {
+  background: #f25c27;
+}
+
+.media-body h5 {
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.media-body a {
+  font-size: 14px;
+}
+
+.post{
+  background: whitesmoke;
+}
+
+#bg {
+  position: relative;
+}
+#bg img {
+  object-fit: cover;
+}
+
+.cardheader__txt {
+  color: #333;
+}
+
+/* Navs */
+
+.brackets {
+  font-size: 22px;
+  font-weight: 700;
+  color: #f25c27;
+}
+
+.navbar-brand:hover{
+  text-shadow: 0 0 35px #f25c27;
+}
+
+.navbar-brand-two {
+  color: #f25c27;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 500;
+  text-shadow: 0 0 35px rgba(95%, 43%, 9%, 1);  
+}
+
+.navbar-nav {
+  text-align: center;
+}
+
+.nav-link {
+  font-size: 14px;
+}
+
+.deco {
+  padding-left: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+.deco * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+.deco li {
+  display: inline-block;
+  list-style: outside none none;
+  margin: 0.5em 1em;
+  padding: 0;
+}
+.deco a {
+  padding: 0.5em 0.8em;
+  color: rgba(255, 255, 255, 0.5);
+  position: relative;
+  text-decoration: none;
+}
+.deco a:before,
+.deco a:after {
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  content: "";
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+  opacity: 0;
+}
+.deco a:before {
+  right: 0;
+  top: 0;
+  border-right: 3px solid #f25c27;
+  border-top: 3px solid #f25c27;
+  -webkit-transform: translate(-100%, 50%);
+  transform: translate(-100%, 50%);
+}
+.deco a:after {
+  left: 0;
+  bottom: 0;
+  border-left: 3px solid #eee;
+  border-bottom: 3px solid #eee;
+  -webkit-transform: translate(100%, -50%);
+  transform: translate(100%, -50%);
+}
+.deco a:hover,
+.deco .current a {
+  color: #ffffff;
+}
+.deco a:hover:before,
+.deco .current a:before,
+.deco a:hover:after,
+.deco .current a:after {
+  -webkit-transform: translate(0%, 0%);
+  transform: translate(0%, 0%);
+  opacity: 1;
+}
+
+
+/* @media screen and (min-width: 800px) {
+  
+} */
+
+
+/* Related */
+
+.related {
+  color: #f25c27;
+}
+
+/* Footer  */
+
+#sticky-footer {
+  flex-shrink: none;
+}
+
+.social{
+  background: rgb(68, 67, 67)
+}
+
+.email {
+  color: #f25c27;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* About page */
+
+.about-main {
+  width: 100%;
+  height: 100vh;
+  background-color: #221d1a;
+  background-image: url("../img/white-carbon.png");
+}
+
+.about_wrapper {
+  margin: 120px auto 0;
+  vertical-align: middle;
+}
+
+.about__text {
+  color: #eee;
+  font-weight: 400;
+}
+
+.content {
+  margin-top: 120px;
+}
+
+.content .text-intro h1 {
+  font-size: 36px;
+  width: 80%;
+  color: #f25c27;
+  font-weight: 700;
+  line-height: 50px;
+}
+
+.typed-cursor {
+  color: #eee;
+  opacity: 1;
+  font-weight: 900;
+  -webkit-animation: blink 0.7s infinite;
+  -moz-animation: blink 0.7s infinite;
+  -ms-animation: blink 0.7s infinite;
+  -o-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-ms-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* 404 page */
+
+.container__error {
+  margin: 200px auto 300px ;
+  height: 100%;
+  text-align: center;
+  vertical-align: center;
+}
+.title__error {
+  margin: 30px 0;
+  font-size: 10em;
+  line-height: 1;
+  letter-spacing: -1px;
+  text-shadow: 0 0 35px rgba(95%, 43%, 9%, 1);
+  -webkit-box-reflect: below 5px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.5, transparent), to(white));
+}

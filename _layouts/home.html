@@ -1,0 +1,48 @@
+---
+layout: default
+
+---
+
+<main>
+  <div class="container main mt-10">
+    <!-- Grid row -->
+    <div class="row">
+      {% for post in site.posts %}
+      {% case forloop.index %}
+      {% when 1 %}
+      {%include postcard-1st.html %}
+      {% when 2 %}
+      {%include postcard-2nd.html %}
+      {% when 3 %}
+      {%include postcard-3rd.html %}          
+      {% endcase %}                              
+      {% endfor %}
+      <!-- Grid row -->
+    </div>
+    <!-- Grid row -->
+    <div class="row">
+      {% for post in site.posts %}
+      {% case forloop.index %}
+      {% when 4 %}
+      {%include postcard-4th.html %}
+      {% when 5 %}
+      {%include postcard-4th.html %}
+      {% when 6 %}
+      {%include postcard-5th.html %} 
+      {% endcase %}                              
+      {% endfor %}
+    </div>
+    <!-- Grid row -->
+    <!-- Grid row -->
+    <div class="row">
+      {% for post in site.posts %}
+      {% case forloop.index %}
+      {% when 7 %}
+      {%include postcard-6th.html %}
+      {% when 8 %}
+      {%include postcard-7th.html %}
+      {% endcase %}                              
+      {% endfor %}       
+      <!-- Grid row -->
+      </div>
+    </main>
