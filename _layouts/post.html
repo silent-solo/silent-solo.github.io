@@ -39,7 +39,24 @@ comments: true
             </span> 
           </div>
             <div class="card-body post">
-                <p class="h4 my-4">{{page.title}}</p>
+
+                <div id="upperWrap">
+                    <div id="upper">{{page.title}}</div> 
+                     </div>
+                   <div id="line"></div>
+                   <div id="lowerWrap">
+                    <div id="lower">{{page.subtitle}}</div> 
+                     </div>
+                     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+                     <script>
+                        var tl = new TimelineMax({ repeat: 0 });
+                   tl.from("#line", 0.5, { scaleX: 0, transformOrigin: "right center" });
+                   tl.from("#upper", 0.75, { y: 30 }, "text");
+                   tl.from("#lower", 0.75, { y: -30 }, "text");
+                   tl.to("#line, #upper, #lower", 1, { opacity: 1 }, "+=3");
+                    
+                     </script>
+    
                 <p>{{page.content}}</p>
             </div>
           </div>

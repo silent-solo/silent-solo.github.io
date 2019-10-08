@@ -58,6 +58,25 @@ main {
   color: #333;
 }
 
+/* card title text decoration */
+#upperWrap, #lowerWrap {
+  overflow: hidden;
+  height: 20px;
+  line-height: 14px;
+  width: 100%;
+  font-weight: 700;
+}
+
+#upper {
+  font-size: 17px;
+}
+
+#line {
+  width: 300px;
+  height: 1px;
+  background: #333;
+}
+
 /* Navs */
 
 .brackets {
@@ -66,11 +85,16 @@ main {
   color: #f25c27;
 }
 
+.navbar-brand{
+  font-family: 'Bungee Inline', cursive;
+}
+
 .navbar-brand:hover{
   text-shadow: 0 0 35px #f25c27;
 }
 
 .navbar-brand-two {
+  font-family: 'Bungee Inline', cursive;
   color: #f25c27;
   text-decoration: none;
   font-size: 24px;
@@ -151,10 +175,17 @@ main {
 }
 
 
-/* @media screen and (min-width: 800px) {
-  
-} */
 
+
+@media only screen and (max-device-width: 480px) {
+
+  .about_wrapper {
+    display: none;
+  }
+  .typewrite{
+    padding-top: 50px;
+  }
+}
 
 /* Related */
 
@@ -196,16 +227,17 @@ main {
 }
 
 .content {
-  margin-top: 120px;
+  
 }
 
-.content .text-intro h1 {
+.text-intro h1 {
   font-size: 36px;
   width: 80%;
   color: #f25c27;
   font-weight: 700;
   line-height: 50px;
 }
+
 
 .typed-cursor {
   color: #eee;
