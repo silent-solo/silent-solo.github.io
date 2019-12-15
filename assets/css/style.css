@@ -43,12 +43,6 @@ main {
   background: #DAD3BA;
 }
 
-.post-image {
-  width: 100%;
-  height: 15vw;
-  object-fit: cover;
-}
-
 .small-cards{
   background: #DAD3BA;
 }
