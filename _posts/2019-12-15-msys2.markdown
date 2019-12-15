@@ -13,8 +13,7 @@ permalink: /:categories/:year/:month/:day/:title.html
 
 А дело было так. Не так давно я впервые устанавливал Ruby на Windows 10 и случайно увидел это:
 
-<!-- ![](https://asv-solo.github.io/assets/img/scr001.jpg) -->
-<img src="https://asv-solo.github.io/assets/img/scr001.jpg" class="img-fluid" alt="photo">
+<img src="https://asv-solo.github.io/assets/img/scr001.jpg" class="post-image" alt="photo">
 
 Что это за тёмная магия и откуда здесь пакетный менеджер арчлинукса?
 Оказывается установщик Ruby Developer Kit (ridk) устанавливает такой компонент msys2, который представляет из себя надстройку позволяющую выполнять команды и устанавливать программы и библиотеки из GNU/Linux окружения. Звучит неплохо, да? 
@@ -55,7 +54,7 @@ pacman -S openssh rsync make
 
 Ламповый pacman на винде. Что может ещё так согреть душу линуксоида??
 
-<img src="https://asv-solo.github.io/assets/img/update.png" class="img-fluid" alt="photo">
+<img src="https://asv-solo.github.io/assets/img/update.png" class="post-image" alt="photo">
 <!-- ![](https://asv-solo.github.io/assets/img/update.png) -->
 
 Также установим фреймворк для нашего шела, я предпочитаю oh-my-zsh (красоты ради, предварительно установим powerline шрифты )
@@ -81,11 +80,11 @@ ZSH_THEME="agnoster"
 Перезагрузим сессию и запустим терминал. Вуаля! 
 
 <!-- ![](https://asv-solo.github.io/assets/img/scr002.png) -->
-<img src="https://asv-solo.github.io/assets/img/scr002.png" class="img-fluid" alt="photo">
+<img src="https://asv-solo.github.io/assets/img/scr002.png" class="post-image" alt="photo">
 
 Немного пошаманив с конфигами, можно получить что-то вроде:
 
 <!-- ![](https://asv-solo.github.io/assets/img/scr002.png) -->
-<img src="https://asv-solo.github.io/assets/img/scr003.png" class="img-fluid" alt="photo">
+<img src="https://asv-solo.github.io/assets/img/scr003.png" class="post-image" alt="photo">
 
 Ну как-то так. 
