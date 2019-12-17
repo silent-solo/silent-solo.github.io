@@ -2,8 +2,8 @@
 layout: post
 title:  " msys2"
 subtitle: "или windows здорового человека"
-postpreview: "Привет, дорогой читатель! В этой статье мы разберемся как поставить pacman, tmux, zsh, vim/emacs, openssh и прочие полезные штуки на ... Винду.  А почему бы и нет! Gричем всё это без WSL, регистрации и смс."
-date:   2019-12-15 23:16:03 +0300
+postpreview: "Привет, дорогой читатель! В этой статье мы разберемся как поставить pacman, tmux, zsh, vim/emacs, openssh и прочие полезные штуки на Win 10 без WSL"
+date:   2019-12-16 23:16:03 +0300
 pic: "/assets/img/home.jpg"
 categories: unixp
 permalink: /:categories/:year/:month/:day/:title.html
@@ -13,9 +13,9 @@ permalink: /:categories/:year/:month/:day/:title.html
 
 А дело было так. Не так давно я впервые устанавливал Ruby на Windows 10 и случайно увидел это:
 
-<img src="https://asv-solo.github.io/assets/img/scr001.jpg" class="img-fluid" alt="photo">
+<img src="https://silent-solo.github.io/assets/img/scr001.jpg" class="img-fluid" alt="photo">
 
-Что это за тёмная магия и откуда здесь пакетный менеджер арчлинукса?
+Сразу возник вопрос: что это за такая тёмная магия и откуда здесь пакетный менеджер арчлинукса? И второй: хочу свой pacman на винде, с бл. и ш. 
 Оказывается установщик Ruby Developer Kit (ridk) устанавливает такой компонент msys2, который представляет из себя надстройку позволяющую выполнять команды и устанавливать программы и библиотеки из GNU/Linux окружения. Звучит неплохо, да? 
 К своему сожалению, я раньше обошел стороной этот проект, как и схожий ему Cygwin (разберём его в следущий раз) ставя в качестве эмулятора терминала conemu (cmder) или git bash, и только сейчас в моё поле зрения попал сей полезный инструмент. 											
 Конечно, если у вас подходящая версия 10-ки, можно просто использовать WSL, и установить дистрибутив из списка майкрософт в качестве подсистемы,  но это не всегда нужно, особенно если винда не является вашей рабочей системой или вам просто нужен хороший терминал, либо отдельный инструментарий unix вроде OpenSSH, rsync, Emacs/vim etc. Либо вы просто не хотите тратить ресурсы компьютера, а плюшки из мира *nix ох как нужны! 
@@ -47,15 +47,20 @@ rem set MSYS2_PATH_TYPE=inherit
 В общем-то всё. Можно ставить софт. Соль и перец по вкусу.
 
 ```bash
+pacman -Syu 
+```
+
+Здесь эта команда вполне безопасна)
+
+```bash
 pacman -S man vim git zsh tmux
 pacman -S openssh rsync make
 
 ```
 
-Ламповый pacman на винде. Что может ещё так согреть душу линуксоида??
+Ламповый pacman на винде. Что может ещё так греть душу?
 
-<img src="https://asv-solo.github.io/assets/img/update.png" class="img-fluid" alt="photo">
-<!-- ![](https://asv-solo.github.io/assets/img/update.png) -->
+<img src="https://silent-solo.github.io/assets/img/update.png" class="img-fluid" alt="photo">
 
 Также установим фреймворк для нашего шела, я предпочитаю oh-my-zsh (красоты ради, предварительно установим powerline шрифты )
 
@@ -79,12 +84,10 @@ ZSH_THEME="agnoster"
 ```
 Перезагрузим сессию и запустим терминал. Вуаля! 
 
-<!-- ![](https://asv-solo.github.io/assets/img/scr002.png) -->
-<img src="https://asv-solo.github.io/assets/img/scr002.png" class="img-fluid" alt="photo">
+<img src="https://silent-solo.github.io/assets/img/scr002.png" class="img-fluid" alt="photo">
 
-Немного пошаманив с конфигами, можно получить что-то вроде:
+Немного пошаманив с конфигами, можно получить нечто вроде:
 
-<!-- ![](https://asv-solo.github.io/assets/img/scr002.png) -->
-<img src="https://asv-solo.github.io/assets/img/scr003.png" class="img-fluid" alt="photo">
+<img src="https://silent-solo.github.io/assets/img/scr003.png" class="img-fluid" alt="photo">
 
-Ну как-то так. 
+Ну как-то так. И никакие Убунту подсистемой ненужны :)
