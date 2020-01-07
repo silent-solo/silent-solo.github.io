@@ -14,13 +14,14 @@ body {
 
 
 .preloader {
-  --bg-color: #212121;
-  --size: 200px;
+  --bg-color: #333;
+  --size: 100px;
   --first-color: #CD654C;
   --second-color: #EFD568;
   --third-color: #A7B3C2;
   --thickness: 5px;
   --duration: 1s;
+  z-index: 100500;
   position: fixed;
   width: 100%;
   height: 100%;
@@ -28,7 +29,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: var(--duration)
+  transition: var(--duration);
+  -webkit-transition: var(--duration);
+  -moz-transition: var(--duration);
+  -ms-transition: var(--duration);
+  -o-transition: var(--duration);
 }
 
 .preloader_content {
@@ -292,8 +297,7 @@ main {
 }
 
 .about_wrapper {
-  margin: 120px auto 0;
-  vertical-align: middle;
+  margin: 0 auto;
 }
 
 .about__text {
@@ -302,12 +306,14 @@ main {
 }
 
 .content {
-  
+  display: flex;
+  justify-content: center;
 }
 
 .text-intro h1 {
-  font-size: 36px;
-  width: 80%;
+  padding-top: 70px;
+  font-size: 46px;
+  width: 100%;
   color: #f25c27;
   font-weight: 700;
   line-height: 50px;

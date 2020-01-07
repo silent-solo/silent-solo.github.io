@@ -1,5 +1,7 @@
+
+
 function preloader (){
-  $(() => {
+  $(document).ready(function(){
     setInterval(() => {
       let p = $('.preloader');
       p.css('opacity', 0);  
@@ -22,23 +24,40 @@ $('.nav-item').on('click', function(){
 }); 
 
 
+
+
+
 function Typewriting(element, delay) {  
   $(document).ready(function(){
     setTimeout( function(){
       if($("#site-type").length) {
-        $(element).typed({
-          strings: ["this is a typical geek blog", "about", "arch i3 anime wallp", 
-                    "sorry", "programming, *nix, arts", "so enjoy", "and", "sudo love it"   ],
-          typeSpeed: 120,
-          backDelay: delay,
-          loop: false,
-          contentType: 'html', // or text
-          // defaults to false for infinite loop
-          loopCount: false,
-        });
+        var typewriter = new Typewriter(element, {
+          loop: false
+        });        
+      
+      typewriter.typeString('Hi, dear User!')
+          .pauseFor(2500)
+          .deleteAll()
+          .typeString('Welcome to my blog')
+          .pauseFor(1500)
+          .deleteAll()
+          .typeString('about *nix, code, web-development, anime')
+          .pauseFor(1500)
+          .deleteChars(4)
+          .typeString('rt-design, etc.')
+          .pauseFor(2500)
+          .deleteAll()
+          .typeString('So, enjoy')
+          .pauseFor(1500)
+          .deleteAll()
+          .typeString('and')
+          .pauseFor(1500)
+          .deleteAll()
+          .typeString('sudo love IT')
+          .start();
       }
     }, 3000);
   });
 }
 
-Typewriting(".typewrite span", "sudo love it", 400);
+Typewriting(".typewrite span", 400);
